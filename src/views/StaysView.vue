@@ -1,7 +1,7 @@
 <script setup>
-import StaysList from '../stays/components/StaysList.vue'
+import Stays from '../stays/Stays.vue'
 </script>
 
 <template>
-  <StaysList />
+  <Stays />
 </template>
