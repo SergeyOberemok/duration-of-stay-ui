@@ -1,12 +1,12 @@
 <script setup>
 import * as d3 from 'd3'
-import { onMounted, defineProps } from 'vue'
+import { defineProps, onMounted } from 'vue'
 
 const props = defineProps({
   stays: {
     type: Array,
-    required: true,
-  },
+    required: true
+  }
 })
 
 const data = [...props.stays]
@@ -35,7 +35,7 @@ onMounted(() => {
   })
 })
 
-function updateSvg(params) {
+function updateSvg() {
   const svg = d3
     .select('svg')
     .attr('width', width)

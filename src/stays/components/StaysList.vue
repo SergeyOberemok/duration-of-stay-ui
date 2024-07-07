@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps } from 'vue'
+import StayItem from './StayItem.vue'
 
 const props = defineProps({
   stays: {
@@ -13,7 +14,7 @@ const stays = props.stays
 
 <template>
   <h3>Stays</h3>
-  <div v-for="stay in stays" :key="stay._id">
-    {{ stay.title }}
+  <div v-for="stay in stays" :key="stay.id">
+    <StayItem :stay="stay" />
   </div>
 </template>
