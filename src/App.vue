@@ -6,9 +6,9 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <header>
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <!-- <HelloWorld msg="You did it!" /> -->
 
-      <nav>
+      <nav class="hidden">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/stays">Stays</RouterLink>
         <RouterLink to="/about">About</RouterLink>
