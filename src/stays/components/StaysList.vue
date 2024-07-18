@@ -13,8 +13,9 @@ const stays = props.stays
 </script>
 
 <template>
-  <h3>Stays</h3>
-  <div v-for="stay in stays" :key="stay.id">
-    <StayItem :stay="stay" />
+  <div class="container mx-auto">
+    <div v-for="stay in stays" :key="stay.id">
+      <StayItem :stay="stay" />
+    </div>
   </div>
 </template>

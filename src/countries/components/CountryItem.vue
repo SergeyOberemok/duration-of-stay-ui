@@ -11,8 +11,14 @@ const { country } = props
 <template>
   <div class="flex">
     <div class="me-1">{{ country.name }}</div>
-    <div class="flex">
-      <div class="me-1" v-for="city in country.cities" :key="city.id">{{ city }}</div>
+    <div class="hidden md:flex">
+      <div
+        v-for="(city, index) in country.cities"
+        :key="city.id"
+        :class="index == country.cities.length - 1 ? 'me-1' : ''"
+      >
+        {{ city }}
+      </div>
     </div>
   </div>
 </template>

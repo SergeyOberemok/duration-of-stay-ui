@@ -46,8 +46,8 @@ function updateSvg() {
 }
 
 function createScaleX() {
-  const minTimestamp = d3.min(data, (d) => d.startDate.getTime())
-  const maxTimestamp = d3.max(data, (d) => d.endDate.getTime())
+  const minTimestamp = d3.min(data, (d) => d.start.getTime())
+  const maxTimestamp = d3.max(data, (d) => d.end.getTime())
 
   const x = d3.scaleLinear().domain([minTimestamp, maxTimestamp]).range([0, width])
 
@@ -65,8 +65,8 @@ function createScaleColor() {
 }
 
 function appendRect(group, d, i, scaleX, scaleY, scaleColor) {
-  const startX = scaleX(d.startDate.getTime())
-  const endX = scaleX(d.endDate.getTime())
+  const startX = scaleX(d.start.getTime())
+  const endX = scaleX(d.end.getTime())
 
   group
     .append('rect')
